@@ -10,6 +10,8 @@ We all love transparency, and UIBlurEffect makes it easy to build beautiful, gla
 
 This is a subclass of UIVisualEffectView, with the ability to control the `blurRadius` of the effect. This property can be changed at any time, and is even animatable. See for yourself:
 
+(Example project included in repository)
+
 ![auto.gif](https://github.com/collinhundley/APCustomBlurView/blob/master/SiteAssets/auto.gif?raw=true)
 ![slider.gif](https://github.com/collinhundley/APCustomBlurView/blob/master/SiteAssets/slider.gif?raw=true)
 
@@ -35,7 +37,7 @@ In addition to UIVisualEffectView's normal properties, APCustomBlurView provides
 
     blurView.setBlurRadius(25)
 
-That's *much* better than learning OpenGL! You can also use it inside an animation block:
+That's *much* easier than learning OpenGL! You can also use it inside an animation block:
 
     UIView.animateWithDuration(0.5) {
         blurView.setBlurRadius(25)
