@@ -1,14 +1,16 @@
 //
-//  CustomBlurView.swift
+//  APCustomBlurView.swift
 //  Created by Collin Hundley on 1/15/16.
 //
 
 import UIKit
 
-public class CustomBlurView: UIVisualEffectView {
+public class APCustomBlurView: UIVisualEffectView {
     
     private let blurEffect: UIBlurEffect
-    private var blurRadius: CGFloat
+    public var blurRadius: CGFloat {
+        return blurEffect.valueForKeyPath("blurRadius") as! CGFloat
+    }
     
     public convenience init() {
         self.init(withRadius: 0)
@@ -20,7 +22,6 @@ public class CustomBlurView: UIVisualEffectView {
         self.blurEffect = customBlurObject.init() as! UIBlurEffect
         self.blurEffect.setValue(1.0, forKeyPath: "scale")
         self.blurEffect.setValue(radius, forKeyPath: "blurRadius")
-        self.blurRadius = radius
         super.init(effect: radius == 0 ? nil : self.blurEffect)
     }
     
@@ -33,9 +34,8 @@ public class CustomBlurView: UIVisualEffectView {
             return
         }
         if blurRadius != 0 {
-            print("CustomBlurView warning: Attempting to animate blur radius more than one time can produce unintended results.")
+            print("APCustomBlurView warning: Blur view radius should only be animated from  Attempting to animate blur radius more than one time can produce unintended results.")
         }
-        blurRadius = radius
         blurEffect.setValue(radius, forKeyPath: "blurRadius")
         self.effect = blurEffect
     }
