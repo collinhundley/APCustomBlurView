@@ -33,9 +33,6 @@ public class APCustomBlurView: UIVisualEffectView {
         guard radius != blurRadius else {
             return
         }
-        if blurRadius != 0 {
-            print("APCustomBlurView warning: Blur view radius should only be animated from  Attempting to animate blur radius more than one time can produce unintended results.")
-        }
         blurEffect.setValue(radius, forKeyPath: "blurRadius")
         self.effect = blurEffect
     }

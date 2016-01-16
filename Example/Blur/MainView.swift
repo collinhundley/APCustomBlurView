@@ -13,6 +13,7 @@ class MainView: UIView {
     let blurView = APCustomBlurView()
     let blurSlider = UISlider()
     let blurButton = APSpringButton()
+    let exampleColor = UIColor(red: 70 / 255, green: 100 / 255, blue: 170 / 255, alpha: 0.8)
     
     convenience init() {
         self.init(frame: CGRectZero)
@@ -35,12 +36,14 @@ class MainView: UIView {
         blurSlider.minimumValue = 0
         blurSlider.maximumValue = 40
         blurSlider.value = 0
-        blurSlider.tintColor = UIColor(red: 40 / 255, green: 70 / 255, blue: 160 / 255, alpha: 0.8)
+        blurSlider.tintColor = exampleColor
         blurSlider.transform = CGAffineTransformMakeScale(0.8, 0.8)
         
-        blurButton.setTitle("Blur", forState: .Normal)
+        blurButton.setTitle("Auto", forState: .Normal)
         blurButton.titleLabel?.font = .systemFontOfSize(20)
-        blurButton.backgroundColor = UIColor(red: 40 / 255, green: 70 / 255, blue: 160 / 255, alpha: 0.8)
+        blurButton.backgroundColor = exampleColor
+        blurButton.layer.borderColor = UIColor(white: 1, alpha: 0.4).CGColor
+        blurButton.layer.borderWidth = 1
         blurButton.layer.cornerRadius = 6
         blurButton.minimumScale = 0.93
         

@@ -31,12 +31,17 @@ class MainViewController: UIViewController {
         UIView.animateWithDuration(0.5) {
             self.mainView.blurView.setBlurRadius(radius)
         }
-        let title = mainView.blurButton.titleLabel?.text == "Blur" ? "Un-blur" : "Blur"
-        mainView.blurButton.setTitle(title, forState: .Normal)
+//        updateButtonTitle()
     }
     
     func sliderMoved(slider: UISlider) {
         mainView.blurView.setBlurRadius(CGFloat(slider.value))
+//        updateButtonTitle()
+    }
+    
+    private func updateButtonTitle() {
+        let title = mainView.blurView.blurRadius == 0 ? "Blur" : "Un-blur"
+        mainView.blurButton.setTitle(title, forState: .Normal)
     }
     
 }
