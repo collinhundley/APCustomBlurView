@@ -35,7 +35,7 @@ In addition to UIVisualEffectView's normal properties, APCustomBlurView provides
 
     blurView.setBlurRadius(25)
 
-It can also be used inside an animation block:
+That sure beats learning OpenGL! It can also be used inside an animation block:
 
     UIView.animateWithDuration(0.5) {
         blurView.setBlurRadius(25)
@@ -43,7 +43,9 @@ It can also be used inside an animation block:
 
 ### Compatibility
 
-APCustomBlurView is compatible with iOS 8.0 and above, and all versions of tvOS. If you didn't read the disclaimer at the top of this page, **do it now!**  I don't recommend using this class in an app that you plan to submit for review, but it's really useful for building personal apps and proofs-of-concept.
+APCustomBlurView is compatible with iOS 8.0 and above, and all versions of tvOS.
+
+If you didn't read the disclaimer at the top of this page, **do it now!**  I don't recommend using this class in an app that you plan to submit for review, but it's really great for building personal apps and proofs-of-concept. My hope is that the next version of iOS will render this class obsolete.
 
 
 #### Note:
