@@ -1,5 +1,5 @@
 # APCustomBlurView
-A subclass of UIVisualEffectView with custom blur radius
+A subclass of UIVisualEffectView with customizable blur radius
 
 ##### Disclaimer
 APCustomBlurView utilizes a private UIKit API to do its magic. It is intended for **internal use only.** Use caution; submitting this code to the App Store adds the risk of being rejected!
