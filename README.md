@@ -35,7 +35,7 @@ In addition to UIVisualEffectView's normal properties, APCustomBlurView provides
 
     blurView.setBlurRadius(25)
 
-That sure beats learning OpenGL! It can also be used inside an animation block:
+That's *much* better than learning OpenGL! You can also use it inside an animation block:
 
     UIView.animateWithDuration(0.5) {
         blurView.setBlurRadius(25)
