@@ -4,7 +4,7 @@ A subclass of UIVisualEffectView with customizable blur radius
 ##### Disclaimer
 APCustomBlurView utilizes a private UIKit API to do its magic. It is intended for **internal use only.** Use caution; submitting this code to the App Store adds the risk of being rejected!
 
-### What It Is
+### What it is
 
 We all love transparency, and UIBlurEffect makes it easy to build beautiful, glassy overlays. But sometimes we need more customization options: most notably, control over the amount of blur applied to a view. That's where APCustomBlurView comes in!
 
